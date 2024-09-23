@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeacherScore</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <script type="module" src="/components/header.js"></script>
+    <script type="module" src="/components/comment.js"></script>
+    <style>
+        .reaction-bar i {
+            font-style: normal;
+            font-size: 14px;
+        }
+        @media screen and (min-width: 768px) {
+            .content {
+                display: grid !important;
+                grid-template-rows: 1fr 2rem;
+                grid-template-areas: "warning" "extra";
+            }
+            .extra {
+                grid-area: extra;
+            }
+            .warning {
+                grid-area: warning;
+            }
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column"> 
+    <header-component></header-component>
+    
+    <div class="container py-4">
+        <div class="row">
+            <div class="description col-md-4 d-flex flex-column align-items-center">
+                <img src="/assets/logo-placeholder.png" alt="Teacher Image" class="img-fluid rounded-circle mb-2" style="width: 160px;">
+                <h5 class="text-center">Profesor Apellido Apellido</h5>
+                <ul class="list-unstyled text-center row row-cols-2">
+                    <li>Materia 1</li>
+                    <li>Materia 2</li>
+                    <li>Materia 3</li>
+                    <li>Materia 4</li>
+                </ul>
+            </div>
+            <div class="content col-sm d-flex flex-column row-gap-3">
+                <div class="extra d-flex flex-column flex-sm-row align-items-center justify-content-sm-between">
+                    <div class="stars d-flex column-gap-1 justify-content-center">
+                        <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
+                        <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
+                        <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
+                        <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
+                        <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
+                    </div>
+                    <div class="d-flex align-items-center row-gap-3">
+                        <div class="reaction-bar d-flex justify-content-around column-gap-2">
+                            <button type="button" class="btn btn-outline-secondary rounded-pill">
+                                <i class="bi bi-hand-thumbs-up-fill"> 0</i>
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary rounded-pill">
+                                <i class="bi bi-heart-fill"> 0</i> 
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary rounded-pill">
+                                <i class="bi bi-emoji-laughing-fill"> 0</i> 
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary rounded-pill">
+                                <i class="bi bi-emoji-frown-fill"> 0</i>
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary rounded-pill">
+                                <i class="bi bi-emoji-angry-fill"> 0</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="warning alert alert-danger justify-self-start d-flex align-items-center column-gap-2 mb-0" role="alert" style="min-height: 120px;">                    
+                    <img src="/assets/red-alert-icon.svg" class="img-fluid" style="width: 60px;">
+                    <span><strong>Este profesor tiene muchas críticas negativas</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container mt-4">
+        <h4>Comentarios</h4>
+        <div class="list-group">
+            <comment-component></comment-component>
+            <comment-component></comment-component>
+            <comment-component></comment-component>
+            <comment-component></comment-component>
+        </div>
+    </div>
+
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

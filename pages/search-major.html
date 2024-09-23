@@ -8,23 +8,32 @@
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/styles/main.css">
     <script type="module" src="/components/header.js"></script>
+    <script type="module" src="/components/simple-card.js"></script>
 </head>
 
-<body class="d-flex flex-column">
+<body class="d-flex flex-column"> 
     <header-component></header-component>
     
-    <div class="container flex-grow-1 d-flex align-content-center">
-        <div class="search-bar container-xxl pt-3 d-flex justify-content-center align-items-center flex-column">
-            <h3>Busca tu escuela</h3>
-            <input type="text" class="form-control" id="search-input" placeholder="Universidad Autónoma de Baja California" aria-label="Universidad Autónoma de Baja California">
+    <div class="container flex-grow-1 d-flex align-content-center flex-column row-gap-3 p-4">
+    
+        <div class="search-bar container-xxl d-flex justify-content-center align-items-center flex-column p-0">
+            <h3>Carreras</h3>
+            <input type="text" class="form-control" id="search-input" placeholder="Carrera" aria-label="Carrera">
         </div>
+    
+        <div class="majors d-flex align-content-stretch flex-column row-gap-2 flex-wrap">
+            <simple-card></simple-card>
+        </div>
+
+        
     </div>
+
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.getElementById("search-input").addEventListener("keydown", (event) => {
             if (event.key === "Enter") {
                 event.preventDefault();
-                window.location.href = "pages/search-university.html";
+                window.location.href = "search-subject.html";
             }
         });
     </script>
