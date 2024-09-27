@@ -45,39 +45,39 @@
                     <li>Materia 3</li>
                     <li>Materia 4</li>
                 </ul>
+                <div class="stars d-flex column-gap-1 justify-content-center">
+                    <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
+                    <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
+                    <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
+                    <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
+                    <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
+                </div>
             </div>
             <div class="content col-sm d-flex flex-column row-gap-3">
-                <div class="extra d-flex flex-column flex-sm-row align-items-center justify-content-sm-between">
-                    <div class="stars d-flex column-gap-1 justify-content-center">
-                        <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
-                        <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
-                        <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
-                        <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
-                        <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
-                    </div>
+                <div class="alert alert-danger d-flex justify-content-center align-items-center mb-0" role="alert" style="min-height: 120px;">                    
+                    <img src="/assets/red-alert-icon.svg" class="img-fluid me-2" style="width: 60px;">
+                    <span class="text-center"><strong>Este profesor tiene muchas críticas negativas</strong></span>
+                </div>
+                <div class="extra d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-md-end">
                     <div class="d-flex align-items-center row-gap-3">
                         <div class="reaction-bar d-flex justify-content-around column-gap-2">
                             <button type="button" class="btn btn-outline-secondary rounded-pill">
-                                <i class="bi bi-hand-thumbs-up-fill"> 0</i>
+                                <img class="emoji-reaction" src="/assets/emojis/heart.svg" alt=""> 0
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary rounded-pill" >
+                                <img class="emoji-reaction" src="/assets/emojis/thumbs-up.svg" alt=""> 0
                             </button>
                             <button type="button" class="btn btn-outline-secondary rounded-pill">
-                                <i class="bi bi-heart-fill"> 0</i> 
+                                <img class="emoji-reaction" src="/assets/emojis/neutral-face.svg" alt=""> 0 
                             </button>
                             <button type="button" class="btn btn-outline-secondary rounded-pill">
-                                <i class="bi bi-emoji-laughing-fill"> 0</i> 
+                                <img class="emoji-reaction" src="/assets/emojis/slightly-frowning-face.svg" alt=""> 0
                             </button>
                             <button type="button" class="btn btn-outline-secondary rounded-pill">
-                                <i class="bi bi-emoji-frown-fill"> 0</i>
-                            </button>
-                            <button type="button" class="btn btn-outline-secondary rounded-pill">
-                                <i class="bi bi-emoji-angry-fill"> 0</i>
+                                <img class="emoji-reaction" src="/assets/emojis/hot-face.svg" alt=""> 0
                             </button>
                         </div>
                     </div>
-                </div>
-                <div class="warning alert alert-danger justify-self-start d-flex align-items-center column-gap-2 mb-0" role="alert" style="min-height: 120px;">                    
-                    <img src="/assets/red-alert-icon.svg" class="img-fluid" style="width: 60px;">
-                    <span><strong>Este profesor tiene muchas críticas negativas</strong></span>
                 </div>
             </div>
         </div>

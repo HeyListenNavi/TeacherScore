@@ -2,4 +2,8 @@ body, html {
   min-height: 100vh;
 }
 
+.emoji-reaction{
+  width: 20px;
+}
+
 /*# sourceMappingURL=main.css.map */
