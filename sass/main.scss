@@ -1,3 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
 body, html {
     min-height: 100vh;
+}
+
+.noto-color-emoji-regular {
+    font-family: "Noto Color Emoji", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+.reactions {
+    span {
+        font-style: normal;
+        font-size: 1rem;
+    }
+    .btn {
+        height: 2.5rem;
+    }
+
+    @media screen and (max-width: 375px) {
+        .btn {
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            padding: 0 0.5rem;
+            span {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .teacher-card {
+        display: grid !important;
+        grid-template-columns: 30% 1fr;
+        grid-template-rows: 1fr 3rem;
+        grid-template-areas: "description warning"
+                             "description reactions";
+    }
+    .description {
+        grid-area: description
+    }
+    .reactions {
+        grid-area: reactions;
+    }
+    .warning {
+        grid-area: warning;
+    }
 }

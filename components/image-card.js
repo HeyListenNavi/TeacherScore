@@ -4,13 +4,13 @@ class ImageCard extends HTMLElement {
     constructor() {
         super();
         this.innerHTML = `
-            <div class="image-card card mb-3 w-100">
+            <div class="image-card card mb-3">
                 <div class="row g-0">
-                    <div class="col-sm-2  p-2 d-flex align-items-center justify-content-center">
+                    <div class="col-4 col-sm-2 col-xl-1 d-flex align-items-center p-2">
                         <img src="/assets/logo-placeholder.png" class="logo img-fluid rounded-start" alt="university-logo">
                     </div>
-                    <div class="col-sm">
-                        <div class="card-body d-flex flex-column justify-content-center flex-wrap h-100">
+                    <div class="col d-flex align-items-center">
+                        <div class="card-body">
                             <h5 class="card-title">Titulo</h5>
                             <p class="card-text"></p>
                         </div>
