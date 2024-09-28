@@ -4,7 +4,7 @@ class Comment extends HTMLElement {
     constructor() {
         super();
         this.innerHTML = `
-            <div class="comment list-group-item">
+            <div class="comment list-group-item rounded">
                 <div class="d-flex w-100 column-gap-2 align-items-center">
                     <img src="/assets/logo-placeholder.png" alt="User" class="avatar rounded-circle" style="width: 60px; height: 60px;">
                     <div class="w-100 d-flex flex-column justify-content-center column-gap-2 align-items-stretch">

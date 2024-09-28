@@ -4,11 +4,11 @@ class SimpleCard extends HTMLElement {
     constructor() {
         super();
         this.innerHTML = `
-            <div class="major-card card mb-3 w-100">
+            <button type="button" class="major-card image-card btn btn-dark card mb-3 w-100">
                 <div class="card-body">
                     <h5 class="card-title m-0">Texto</h5>
                 </div>
-            </div>
+            </button>
         `;
     }
     
