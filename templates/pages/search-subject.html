@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeacherScore</title>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/main.min.css">
+
+    <!-- TESTING: Will be replaced for a partial template in the server -->
     <script type="module" src="/components/header.js"></script>
-    <script type="module" src="/components/simple-card.js"></script>
 </head>
 
 <body class="d-flex flex-column"> 
@@ -22,7 +22,11 @@
         </div>
     
         <div class="subjects d-flex align-content-stretch flex-column row-gap-2 flex-wrap">
-            <simple-card></simple-card>
+            <button type="button" class="major-card image-card btn btn-dark card mb-3 w-100">
+                <div class="card-body">
+                    <h5 class="card-title m-0">Texto</h5>
+                </div>
+            </button>
         </div>
 
         

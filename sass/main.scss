@@ -1,5 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+// Color palette 🎨
+$seasalt-white: #F9F9F9;
+$antiflash-white: #EBEBEB;
+$night-black: #0C120C;
 
+$bice-blue: #1B70B1;
+$argentinian-blue: #5AA9E6;
+$light-sky-blue: #7FC8F8;
+
+$gold-yellow: #FFD60A;
+$sunglow-yellow: #FFC857;
+$cornsilk-yellow: #FFF8D6;
+
+$burgundi-red: #8C1827;
+$crimson-red: #D7263D;
+$salmon-red: #ED96A2;
+
+// Import bootstrap and emojis font (●'◡'●)
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap");
+
+// General styles 🪐
 body, html {
     min-height: 100vh;
 }
@@ -31,6 +51,21 @@ body, html {
                 font-size: 0.8rem;
             }
         }
+    }
+}
+
+.stars {
+    position: relative;
+    
+    input {
+        opacity: 0;
+        position: absolute;
+        height: 100%;
+    }
+
+    i {
+        font-size: 22px;
+        color: #b2b2b2;
     }
 }
 

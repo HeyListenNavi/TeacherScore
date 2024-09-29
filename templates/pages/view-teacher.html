@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeacherScore</title>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/main.min.css">
+    <script src="/assets/js/main.js"></script>
+
+    <!-- TESTING: Will be replaced for a partial template in the server -->
     <script type="module" src="/components/header.js"></script>
-    <script type="module" src="/components/comment.js"></script>
 </head>
 
 <body class="d-flex flex-column"> 
@@ -33,11 +33,12 @@
                 <li>Materia 4</li>
             </ul>
             <div class="stars d-flex column-gap-1 justify-content-center">
-                <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
-                <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
-                <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
-                <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
-                <i style="font-size: 22px; color: #eb9f1c" class="bi bi-star-fill"></i>
+                <input max="5" step="0.5" style="--value:2.5" type="range" value="2.5">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
             </div>
         </div>
 
@@ -72,10 +73,18 @@
     <div class="container mt-4">
         <h4>Comentarios</h4>
         <div class="list-group d-flex gap-2">
-            <comment-component></comment-component>
-            <comment-component></comment-component>
-            <comment-component></comment-component>
-            <comment-component></comment-component>
+            <div class="comment list-group-item rounded">
+                <div class="d-flex w-100 column-gap-2 align-items-center">
+                    <img src="/assets/logo-placeholder.png" alt="User" class="avatar rounded-circle" style="width: 60px; height: 60px;">
+                    <div class="w-100 d-flex flex-column justify-content-center column-gap-2 align-items-stretch">
+                        <div class="d-flex justify-content-between">
+                            <span class="user"><strong>@usuario</strong></span>
+                            <small class="date">Mes dia, año</small>
+                        </div>
+                        <p class="text m-0">Contenido del comentario.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

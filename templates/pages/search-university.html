@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeacherScore</title>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/main.min.css">
+
+    <!-- TESTING: Will be replaced for a partial template in the server -->
     <script type="module" src="/components/header.js"></script>
-    <script type="module" src="/components/image-card.js"></script>
 </head>
 
 <body class="d-flex flex-column">
@@ -22,7 +22,19 @@
         </div>
     
         <div class="universities d-flex align-content-stretch flex-column row-gap-2 flex-wrap">
-            <image-card text="Calle tal, colonia tal, ubicada en tal"></image-card>
+            <button type="button" class="image-card btn btn-dark card mb-3 w-100">
+                <div class="row g-0 w-100">
+                    <div class="col-4 col-sm-2 col-xl-1 d-flex align-items-center p-2">
+                        <img src="/assets/logo-placeholder.png" class="logo img-fluid rounded-start" alt="university-logo">
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <div class="card-body">
+                            <h5 class="card-title text-start">Titulo</h5>
+                            <p class="card-text text-start">Calle tal, colonia tal</p>
+                        </div>
+                    </div>
+                </div>
+            </button>
         </div>
         
     </div>
