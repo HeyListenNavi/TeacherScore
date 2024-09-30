@@ -23,10 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function rateStars(rating, stars) {
     stars.forEach(star => {
-        star.style.color = "#b2b2b2";
+        star.style.color = "#909294";
         
         if (rating > 0) {
-            star.style.color = "#eb9f1c";
+            star.style.color = "#FFC857";
         }
         
         rating--;

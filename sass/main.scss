@@ -1,3 +1,7 @@
+// Import fonts ⌨️
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Quicksand:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap");
+
 // Color palette 🎨
 $seasalt-white: #F9F9F9;
 $antiflash-white: #EBEBEB;
@@ -15,9 +19,39 @@ $burgundi-red: #8C1827;
 $crimson-red: #D7263D;
 $salmon-red: #ED96A2;
 
-// Import bootstrap and emojis font (●'◡'●)
+$primary: $argentinian-blue;
+$secondary: $antiflash-white;
+$success: $bice-blue;
+$info: $light-sky-blue;
+$warning: $sunglow-yellow;
+$danger: $crimson-red;
+$light: $seasalt-white;
+$dark: $night-black;
+
+// Styles
+$border-radius: 0.8rem;
+
+$enable-shadows: true;
+
+$focus-ring-width: 0.2rem;
+
+$font-family-sans-serif: "Nunito Sans", sans-serif;
+
+$input-btn-padding-x: 1rem;
+$input-padding-y-lg: 1rem;
+$input-padding-x-lg: 1.5rem;
+$input-border-radius-lg: 2rem;
+
+$alert-border-width: 3px;
+
+// Import bootstrap (●'◡'●)
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/bootstrap";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap");
+
+// Import bootstrap icons (✿◡‿◡)
+$bootstrap-icons-font-src: url("../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2") format("woff2"), url("../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff") format("woff");
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons";
 
 // General styles 🪐
 body, html {
@@ -30,6 +64,32 @@ body, html {
     font-style: normal;
 }  
 
+.search-input {
+    position: relative;
+
+    .icon {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        transform: translateY(-50%);
+        right: calc($input-padding-x + 1rem);
+        color: $input-placeholder-color;
+    }
+}
+
+// Search cards
+.universities, .majors, .subjects, .teachers{
+    .btn {
+        border-radius: $border-radius-xl;
+
+        &:hover {
+            background-color: $primary;
+            border-color: $light-sky-blue;
+        }
+    }
+}
+
+// Teacher page styles
 .reactions {
     span {
         font-style: normal;
@@ -37,19 +97,9 @@ body, html {
     }
     .btn {
         height: 2.5rem;
-    }
-
-    @media screen and (max-width: 375px) {
-        .btn {
-            height: 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 5px;
-            padding: 0 0.5rem;
-            span {
-                font-size: 0.8rem;
-            }
+        min-width: 4rem;
+        span {
+            color: $dark-text-emphasis;
         }
     }
 }
@@ -64,8 +114,9 @@ body, html {
     }
 
     i {
+        transition: $btn-transition;
         font-size: 22px;
-        color: #b2b2b2;
+        color: $sunglow-yellow;
     }
 }
 
