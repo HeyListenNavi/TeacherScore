@@ -8,7 +8,7 @@ $antiflash-white: #EBEBEB;
 $night-black: #0C120C;
 
 $bice-blue: #1B70B1;
-$argentinian-blue: #5AA9E6;
+$french-blue: #3C9AE2;
 $light-sky-blue: #7FC8F8;
 
 $gold-yellow: #FFD60A;
@@ -19,7 +19,7 @@ $burgundi-red: #8C1827;
 $crimson-red: #D7263D;
 $salmon-red: #ED96A2;
 
-$primary: $argentinian-blue;
+$primary: $french-blue;
 $secondary: $antiflash-white;
 $success: $bice-blue;
 $info: $light-sky-blue;
@@ -37,11 +37,6 @@ $focus-ring-width: 0.2rem;
 
 $font-family-sans-serif: "Nunito Sans", sans-serif;
 
-$input-btn-padding-x: 1rem;
-$input-padding-y-lg: 1rem;
-$input-padding-x-lg: 1.5rem;
-$input-border-radius-lg: 2rem;
-
 $alert-border-width: 3px;
 
 // Import bootstrap (●'◡'●)
@@ -50,12 +45,17 @@ $alert-border-width: 3px;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Import bootstrap icons (✿◡‿◡)
-$bootstrap-icons-font-src: url("../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2") format("woff2"), url("../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff") format("woff");
+$bootstrap-icons-font-src: url("/fonts/bootstrap-icons.woff2") format("woff2"),
+                           url("/fonts/bootstrap-icons.woff?") format("woff");
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons";
 
 // General styles 🪐
-body, html {
-    min-height: 100vh;
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
 }
 
 .noto-color-emoji-regular {
@@ -64,7 +64,7 @@ body, html {
     font-style: normal;
 }  
 
-.search-input {
+.search-input{
     position: relative;
 
     .icon {
@@ -72,9 +72,13 @@ body, html {
         z-index: 2;
         top: 50%;
         transform: translateY(-50%);
-        right: calc($input-padding-x + 1rem);
+        right: calc($input-padding-x + 0.5rem);
         color: $input-placeholder-color;
     }
+}
+
+.search-bar .results .icon {
+    color: $input-placeholder-color;
 }
 
 // Search cards

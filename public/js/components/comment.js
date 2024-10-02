@@ -1,4 +1,4 @@
-import { changeText, changeAttribute } from "/assets/js/utils.js";
+import { changeText, changeAttribute } from "/js/utils.js";
 
 class Comment extends HTMLElement {
     constructor() {

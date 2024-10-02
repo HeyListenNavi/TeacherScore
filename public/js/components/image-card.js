@@ -1,4 +1,4 @@
-import { changeAttribute, changeText } from "/assets/js/utils.js";
+import { changeAttribute, changeText } from "/js/utils.js";
 
 class ImageCard extends HTMLElement {
     constructor() {

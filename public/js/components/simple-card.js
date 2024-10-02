@@ -1,4 +1,4 @@
-import { changeText } from "/assets/js/utils.js";
+import { changeText } from "/js/utils.js";
 
 class SimpleCard extends HTMLElement {
     constructor() {
